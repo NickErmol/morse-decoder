@@ -49,11 +49,7 @@ function decode(expr) {
             element.match(/.{1,2}/g).forEach(elem => {
                letter += (elem === '10' ? '.' : '-');
             });
-            for (const code in MORSE_TABLE) {
-                if (letter === code){
-                    decodeStr += MORSE_TABLE[code]
-                }
-              }
+              decodeStr += MORSE_TABLE[letter]
          }
     });
      
